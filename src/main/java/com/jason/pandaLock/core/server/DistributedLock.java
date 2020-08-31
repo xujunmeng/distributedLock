@@ -23,17 +23,5 @@ public abstract class DistributedLock {
 	 * @throws ConnectException 
 	 */
 	public abstract boolean tryLock();
-	/**
-	 * 尝试获得锁，如果有锁就返回，如果没有锁就等待，如果等待了一段时间后还没能获取到锁，那么就返回
-	 * @param timeout 单位：秒
-	 * @return
-	 */
-	public abstract boolean tryLock(int timeout);
-	/**
-	 * 尝试获得锁，一直阻塞，直到获得锁为止
-	 * @param timeout 单位：秒
-	 * @throws PandaLockException 
-	 * @throws ConnectException 
-	 */
-	public abstract void lock() ;
+
 }
